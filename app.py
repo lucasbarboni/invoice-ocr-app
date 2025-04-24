@@ -58,3 +58,9 @@ def upload_invoice():
         "avg_cost": round(avg, 2),
         "lines": extracted_lines
     })
+
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
